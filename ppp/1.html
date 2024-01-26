@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="view point" content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet"href="style1.css">
+   <title>Status Bar</title>
+    </head>
+    <body>
+         <div class="hero">
+            <div class="selector">
+                <div id="selectField">
+                    <p id="selectText">Select Social Media</p>
+                    <img src="arrow.png" id="arrowicon">
+                </div>
+                <ul id="list" class="hide">
+                    <li class="option">
+                        <img src="facebook.png">
+                        <p>Facebook</p>
+                    </li>
+                    <li class="option">
+                        <img src="instagram.png">
+                        <p>Instagram</p>
+                    </li>
+                    <li class="option">
+                        <img src="pinterest.png">
+                        <p>Pinterest</p>
+                    </li>
+                    <li class="option">
+                        <img src="twitter.png">
+                        <p>Twitter</p>
+                    </li>
+                    <li class="option">
+                        <img src="whatsapp.png">
+                        <p>Whatsapp</p>
+                    </li>
+                    <li class="option">
+                        <img src="youtube.png">
+                        <p>Youtube</p>
+                    </li>
+                </ul>
+            </div>
+           
+         </div>
+         <script>
+            var selectField=document.getElementById("selectField");
+            var selectText =document.getElementById("selectText");
+            var option=document.getElementsByClassName("option");
+            var list=document.getElementById("list");
+            var arrowicon=document.getElementById("arrowicon");
+
+
+            selectField.onclick=function(){
+                list.classList.toggle("hide");
+                arrowicon.classList.toggle("rotate");
+
+            }
+
+            for(option of option){
+                option.onclick=function(){
+                    selectText.innerHTML=this.textContent;
+                    list.classList.toggle("hide");
+                    arrowicon.classList.toggle("rotate");
+                }
+            }
+         </script>
+    </body>
+</html>
